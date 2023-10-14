@@ -22,6 +22,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
+            justify-content: flex-start; /* Change justify-content to flex-start */
         }
         
         header #profile-photo {
@@ -33,9 +34,8 @@
             background-color: #222;
             border: 2px solid #0074d9;
         }
-
-        h1 {
-            color: #ccc;
+        
+        header h1 {
             margin: 0;
         }
 
@@ -50,6 +50,10 @@
 
         nav ul {
             list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav li {
@@ -127,6 +131,14 @@
             color: red;
             text-decoration: underline;
         }
+
+        /* Add media queries for responsive design */
+        @media (max-width: 767px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -136,25 +148,20 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#studies">Studies</a></li>
-                <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#others">Others</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.uoc.gr/" target="_blank">University of Crete</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.forth.gr/el/home/" target="_blank">ITE</a></li>
-            </ul>
-        </div>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#studies">Studies</a></li>
+            <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#others">Others</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.uoc.gr/" target="_blank">University of Crete</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.forth.gr/el/home/" target="_blank">ITE</a></li>
+        </ul>
     </nav>
 
     <div class="container mt-4">
         <div class="row">
-            <div class="col-md-8 left-column">
+            <div class="col-md-8 left-column" style="margin-left: -30px;">
                 <article>
                     <section>
                         <h2>Resume</h2>
@@ -202,7 +209,7 @@
                 
             </article>
 
-            <aside style="margin-top: 20px;">
+            <aside style="margin-top: 20px; display: flex; justify-content: space-between; align-items: flex-end; background: none;">
                 <a href="https://www.uoc.gr/" target="_blank">
                     <img src="https://www.uoc.gr/resources/slideshow/assets/1dfe4-i.jpg" alt="University of Crete" width="350">
                 </a>
@@ -213,7 +220,7 @@
         </div>
 
         <div class="col-md-4 right-column">
-            <aside>
+            <aside style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>Course Grades</h3>
                 <table class="table">
                     <thead>
@@ -247,7 +254,7 @@
                 </table>
             </aside>
 
-            <aside class="contact-buttons">
+            <aside class="contact-buttons" style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>Contact Information</h3>
                 <p>Email: <a href="mailto:nikbormpoudakis@gmail.com">nikbormpoudakis@gmail.com</a></p>
                 <p>Phone: <kbd>6971598927</kbd></p>
@@ -256,12 +263,12 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://your-website-url.com" class="btn btn-primary">Share on Facebook</a>
             </aside>
 
-            <aside>
+            <aside style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>My Favorite Song</h3>
                 <iframe width="100%" height="150" src="https://www.youtube.com/embed/sTuNcVvvWxU?si=wQ1rOQSsVVWkoUPp" frameborder="0" allowfullscreen></iframe>
             </aside>
 
-            <aside>
+            <aside style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>Audio</h3>
                 <audio controls height="100">
                     <source src="video_audio/audio.mp3" type="audio/mpeg">
@@ -269,7 +276,7 @@
                 </audio>
             </aside>
 
-            <aside>
+            <aside style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>Video</h3>
                 <video controls height="100">
                     <source src="video_audio/video.mp4" type="video/mp4">
