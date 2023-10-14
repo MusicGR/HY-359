@@ -16,28 +16,31 @@
         }
 
         header {
-            background-color: #222;
-            color: #ccc;
-            padding: 40px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Change justify-content to flex-start */
+            background-color: #222 !important;
+            color: #ccc !important;
+            padding: 40px !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
         }
         
         header #profile-photo {
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            margin-right: 20px;
-            background-color: #222;
-            border: 2px solid #0074d9;
+            width: 120px !important;
+            height: 120px !important;
+            object-fit: cover !important;
+            margin-right: 20px !important;
+            background-color: #222 !important;
+            border: 4px solid #fdfeff !important;
         }
         
         header h1 {
-            margin: 0;
+            margin: 0 !important;
+            margin-right: 20px !important; /* Add this line to move the text to the right */
         }
+        
+        
 
         h2 {
             color: #8abedf;
@@ -120,17 +123,18 @@
         }
 
         a {
-            color: #88c6ed;
+            color: #6a6a79 !important;
         }
-
+        
         a:hover {
-            color: yellow;
+            color: yellow !important;
         }
-
+        
         a:visited, a:active {
-            color: red;
+            color: red !important;
             text-decoration: underline;
         }
+        
 
                 /* Add media queries for responsive design */
                 /* For screens with a width of 1024px and higher (PC/laptop monitor, tablet in landscape) */
