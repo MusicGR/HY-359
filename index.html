@@ -5,7 +5,7 @@
     <meta name="description" content="Nikolaos Bormpoudakis's Resume">
     <meta name="keywords" content="resume, studies, interests, skills">
     <meta name="author" content="Nikolaos Bormpoudakis">
-    <title>Nikolaos Bormpoudakis CV</title>
+    <title>Nikolaos Bormpoudakis</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -97,7 +97,7 @@
 
         .btn {
             border-radius: 5px;
-            background-color: #88c6ed; /* Light blue background color for buttons */
+            background-color: #0000FF; /* Blue background color for all buttons */
             color: #333; /* Dark grey text for buttons */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s;
@@ -105,11 +105,11 @@
 
         .btn:hover {
             background-color: #8abedf; /* Light blue hover color for buttons */
+            color: rgb(0, 0, 0); /* Yellow text color when hovering */
         }
 
-        .table th {
-            background-color: #222;
-            color: #fff; /* White text color for table headers */
+        .btn:active {
+            color: red; /* Red text color when clicked */
         }
 
         .table td {
@@ -120,21 +120,61 @@
         a {
             color: #88c6ed; /* Light blue for all links */
         }
-    
+
         a:hover {
             color: yellow; /* Yellow for links on hover */
         }
-    
+
         a:visited, a:active {
             color: red;
             text-decoration: underline;
+        }
+
+        /* Add media queries for responsive design */
+        @media (min-width: 1024px) {
+            header {
+                padding: 60px;
+                font-size: 1.5em;
+            }
+            .left-column {
+                margin-left: 0;
+            }
+            .right-column {
+                margin-left: 30px;
+            }
+        }
+
+        @media (max-width: 1023px) and (min-width: 480px) {
+            header {
+                padding: 30px;
+                font-size: 1.2em;
+            }
+            .left-column {
+                margin-left: 0;
+            }
+            .right-column {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 479px) {
+            header {
+                padding: 20px;
+                font-size: 1em;
+            }
+            .left-column {
+                margin-left: -30px;
+            }
+            .right-column {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="profile_pic.jpg" alt="Profile Photo" id="profile-photo" style="border: 2px solid #fff;">
-        <h1>Nikolaos Bormpoudakis CV</h1>
+        <img src="images/profile.jpg" alt="Profile Photo" id="profile-photo" style="border: 4px solid #fff;">
+        <h1>Nikolaos Bormpoudakis</h1>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -144,7 +184,8 @@
             <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
             <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link" href="#others">Others</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.csd.uoc.gr/" target="_blank">University of Crete</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.uoc.gr/" target="_blank">University of Crete</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.forth.gr/el/home/" target="_blank">ITE</a></li>
         </ul>
     </nav>
 
@@ -195,11 +236,23 @@
                     <h2>Others</h2>
                     <p>In the past and for many years, I was working at the Ministry of Culture and more specifically at the Archaeological Institute of Crete and the Ephorate of Antiquities of Heraklion as a graphic designer and photographer, and I was a member of the team that prepared and implemented the museology in the Archaeological Museum of Heraklion, Crete.</p>
                 </section>
+                
             </article>
+
+            <aside style="margin-top: 20px; display: flex; justify-content: space-between; align-items: flex-end; background: none;">
+                <a href="https://www.uoc.gr/" target="_blank">
+                    <img src="https://www.uoc.gr/resources/slideshow/assets/1dfe4-i.jpg" alt="University of Crete" width="350">
+                </a>
+                <a href="https://www.forth.gr/" target="_blank">
+                    <img src="https://www.forth.gr/files/forth-ite-en.jpg" alt="Foundation for Research and Technology - Hellas" width="350">
+                </a>
+            </aside>
+            
+            
         </div>
 
         <div class="col-md-4 right-column">
-            <aside>
+            <aside style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>Course Grades</h3>
                 <table class="table">
                     <thead>
@@ -233,7 +286,7 @@
                 </table>
             </aside>
 
-            <aside class="contact-buttons">
+            <aside class="contact-buttons" style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>Contact Information</h3>
                 <p>Email: <a href="mailto:nikbormpoudakis@gmail.com">nikbormpoudakis@gmail.com</a></p>
                 <p>Phone: <kbd>6971598927</kbd></p>
@@ -242,34 +295,25 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://your-website-url.com" class="btn btn-primary">Share on Facebook</a>
             </aside>
 
-            <aside>
+            <aside style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>My Favorite Song</h3>
                 <iframe width="100%" height="150" src="https://www.youtube.com/embed/sTuNcVvvWxU?si=wQ1rOQSsVVWkoUPp" frameborder="0" allowfullscreen></iframe>
             </aside>
 
-            <aside>
+            <aside style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>Audio</h3>
                 <audio controls height="100">
-                    <source src="your_audio.mp3" type="audio/mpeg">
+                    <source src="video_audio/audio.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </aside>
 
-            <aside>
+            <aside style="margin-bottom: 20px;"> <!-- Add margin to create space -->
                 <h3>Video</h3>
                 <video controls height="100">
-                    <source src="your_video.mp4" type="video/mp4">
+                    <source src="video_audio/video.mp4" type="video/mp4">
                     Your browser does not support the video element.
                 </video>
-            </aside>
-
-            <aside class="bio-images">
-                <div class="bio-image">
-                    <img src="your_image1.jpg" alt="Image 1">
-                </div>
-                <div class="bio-image">
-                    <img src="your_image2.jpg" alt="Image 2">
-                </div>
             </aside>
         </div>
     </div>
