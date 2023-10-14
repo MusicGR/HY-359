@@ -12,15 +12,21 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #333;
-            color: #fff; /* White text color for the entire page */
+            color: #fff;
         }
 
         header {
             background-color: #222;
             color: #ccc;
-            text-align: left;
+            text-align: center;
             padding: 40px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .header-content {
             display: flex;
             align-items: center;
         }
@@ -36,25 +42,27 @@
         }
 
         h1 {
-            color: #ccc; /* Light grey color for h1 */
+            color: #ccc;
         }
 
         h2 {
-            color: #8abedf; /* Lighter blue color for h2 */
+            color: #8abedf;
         }
 
         h3 {
-            color: #ccc; /* Light grey color for h3 */
-            font-size: 24px; /* Larger font size for h3 */
+            color: #ccc;
+            font-size: 24px;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav li {
-            display: inline;
             margin-right: 20px;
         }
 
@@ -97,32 +105,32 @@
 
         .btn {
             border-radius: 5px;
-            background-color: #0000FF; /* Blue background color for all buttons */
-            color: #333; /* Dark grey text for buttons */
+            background-color: #0000FF;
+            color: #333;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s;
         }
 
         .btn:hover {
-            background-color: #8abedf; /* Light blue hover color for buttons */
-            color: rgb(0, 0, 0); /* Yellow text color when hovering */
+            background-color: #8abedf;
+            color: rgb(0, 0, 0);
         }
 
         .btn:active {
-            color: red; /* Red text color when clicked */
+            color: red;
         }
 
         .table td {
             background-color: #444;
-            color: #fff; /* White text color for table cells */
+            color: #fff;
         }
 
         a {
-            color: #88c6ed; /* Light blue for all links */
+            color: #88c6ed;
         }
 
         a:hover {
-            color: yellow; /* Yellow for links on hover */
+            color: yellow;
         }
 
         a:visited, a:active {
@@ -131,42 +139,10 @@
         }
 
         /* Add media queries for responsive design */
-        @media (min-width: 1024px) {
-            header {
-                padding: 60px;
-                font-size: 1.5em;
-            }
-            .left-column {
-                margin-left: 0;
-            }
-            .right-column {
-                margin-left: 30px;
-            }
-        }
-
-        @media (max-width: 1023px) and (min-width: 480px) {
-            header {
-                padding: 30px;
-                font-size: 1.2em;
-            }
-            .left-column {
-                margin-left: 0;
-            }
-            .right-column {
-                margin-left: 20px;
-            }
-        }
-
-        @media (max-width: 479px) {
-            header {
-                padding: 20px;
-                font-size: 1em;
-            }
-            .left-column {
-                margin-left: -30px;
-            }
-            .right-column {
-                margin-left: 0;
+        @media (max-width: 767px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -229,7 +205,7 @@
                         </ul>
                 </section>
             </article>
-            
+
             <!-- Other box -->
             <article>
                 <section id="others">
@@ -247,8 +223,6 @@
                     <img src="https://www.forth.gr/files/forth-ite-en.jpg" alt="Foundation for Research and Technology - Hellas" width="350">
                 </a>
             </aside>
-            
-            
         </div>
 
         <div class="col-md-4 right-column">
